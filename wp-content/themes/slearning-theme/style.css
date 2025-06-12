@@ -168,7 +168,7 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
  }
 
- /* Campus eLearning*/
+ /* CAMPUS ELEARNING*/
  /* Contenedor centrado para el bloque Campus */
 .bloque-campus {
   max-width: 1200px;
@@ -202,6 +202,7 @@ p#parrafo-campus {
   margin: 30px auto; 
 }
 
+/*BLOQUES BENEFICIOS*/
 /* Cadrícula gris beneficios*/
  #contenedor-beneficios {
   background-color: #ECF0F1;
@@ -224,7 +225,6 @@ p#parrafo-campus {
    align-items: stretch; 
    gap: 20px;
    margin: 40px 0px;
-
  }
 
  /*Cada caja de beneficios*/
@@ -233,10 +233,11 @@ p#parrafo-campus {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  flex: 1 1 25%;
-  min-height: 200px;
+  flex-basis: 1 1 calc(25% - 60px); 
+  min-height: 200px; 
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   height: auto;
+
  }
 
 /*Cajas-tarjetas hover*/
@@ -263,6 +264,7 @@ figure.wp-block-image{
   text-align: center;
   line-height: 1.50 ;
 }
+
 
 /*Bloque ¿porque elegirnos?*/
 .wp-block-media-text{
