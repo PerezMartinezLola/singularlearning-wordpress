@@ -222,7 +222,7 @@ p#parrafo-campus {
    padding: 20px 0;
    display: flex;
    flex-wrap: wrap;
-   align-items: stretch; 
+   align-items: flex-start; 
    gap: 20px;
    margin: 40px 0px;
  }
@@ -233,16 +233,16 @@ p#parrafo-campus {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  flex-basis: 1 1 calc(25% - 60px); 
+  flex-basis: 1 1 calc(25% - 15px); 
   min-height: 200px; 
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: auto;
 
  }
 
 /*Cajas-tarjetas hover*/
 #cajas-beneficios .wp-block-column:hover{
-  transform: scale(1.05); 
+  transform: scale(1.10); 
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
 }
 
@@ -266,7 +266,7 @@ figure.wp-block-image{
 }
 
 
-/*Bloque ¿porque elegirnos?*/
+/*BLOQUE ¿PORQUE ELEGIRNOS?*/
 .wp-block-media-text{
    padding: 40px 20px;
    display: flex;
@@ -452,4 +452,77 @@ figure.wp-block-image{
 
 /*aqui*/
 /* RESPONSIVE */
+/* RESPONSIVE */
+
+/* 1. Móvil - hasta 375px */
+@media screen and (max-width: 375px) {
+  /* Contenedor del header para posicionamiento relativo */
+  #masthead {
+    position: relative;
+  }
+
+  /* Menú hamburguesa visible */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Ocultar menú inicialmente */
+  .menu-menu-singularlearning-container ul {
+    display: none;
+    flex-direction: column;
+    width: 200px; /* Ancho fijo para el menú */
+    background-color: white;
+    padding: 10px 0;
+    position: absolute;
+    top: 100%; /* Se posiciona justo debajo del header */
+    right: 0; /* Se alinea a la derecha, donde está el botón */
+    z-index: 20;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    border-radius: 5px;
+  }
+  
+  /* Mostrar menú cuando botón tiene la clase .active */
+  .menu-toggle.active + .menu-menu-singularlearning-container ul {
+    display: flex;
+  }
+
+  /* Ajustar elementos del menú */
+  .menu-menu-singularlearning-container ul li {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+  }
+
+  /* Hero adaptado */
+  .wp-block-cover__inner-container h1.wp-block-heading {
+    font-size: 22px;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Tarjetas apiladas */
+  .tarjeta-beneficio {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  /* Formulario simplificado */
+  .formulario-contacto input,
+  .formulario-contacto textarea {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* Texto campus */
+  p#parrafo-campus {
+    width: 90%;
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
 
