@@ -26,15 +26,17 @@
 
 		<!-- Enlaces rápidos -->
 		<div class="footer-links">
-			<h4>Enlaces rápidos</h4>
-			<ul>
-				<li><a href="http://localhost/singularlearning/formacion-online-especializada-para-ayuntamientos/">Inicio</a></li>
-				<li><a href="http://localhost/singularlearning/servicios/">Servicios</a></li>
-				<li><a href="http://localhost/singularlearning/soluciones/">Soluciones</a></li>
-				<li><a href="http://localhost/singularlearning/beneficios/">Beneficios</a></li>
-				<li><a href="http://localhost/singularlearning/contacto/">Contacto</a></li>
-				
-			</ul>
+			<!-- Enlaces rápidos -->
+			<div class="footer-links">
+				<h4>Enlaces rápidos</h4>
+				<?php
+				wp_nav_menu(array(
+					'menu' => 'primary.menu', 
+					'menu_class' => 'footer-menu-list',
+					'container' => false,
+				));
+				?>
+			</div>
 		</div>
 
 		<!-- Contacto -->
@@ -56,7 +58,7 @@
 		<!-- Línea separadora verde + copyright -->
 		<div class="site-bottom-bar">
 		<hr class="bottom-separator">
-		<div class="copyright-text">© <?php echo date('Y'); ?> Campus eLearning Municipal. Todos los derechos reservados.</div>
+		<div class="copyright-text">© 2025 Campus eLearning Municipal. Todos los derechos reservados.</div>
 		</div>
 	</div>
 	</footer><!-- #colophon -->

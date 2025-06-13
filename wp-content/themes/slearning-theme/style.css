@@ -234,7 +234,7 @@ p#parrafo-campus {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  flex: 1 1 calc(25% - 20px); 
+  flex: 1 1 calc(25% - 15px); 
   min-height: 200px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: auto;
@@ -370,7 +370,7 @@ figure.wp-block-image{
   gap: 2rem;
 }
 
-/* Logo y descripción centrados y en columna, que ocupen todo el ancho */
+/* Logo y descripción*/
 .footer-logo,
 .footer-description {
   flex-basis: 100%; 
@@ -384,6 +384,11 @@ figure.wp-block-image{
   margin: 0 auto;
 }
 
+/*Ocultamos de Enlaces rápidos el botón demo del menú*/
+.footer-menu-list li:last-child {
+    display: none;
+}
+
 /* Las columnas */
 .footer-links,
 .footer-contact,
@@ -392,7 +397,7 @@ figure.wp-block-image{
   min-width: 200px;
 }
 
-/* Estilos de texto y listas igual que antes */
+/* Estilos de texto*/
 .footer-links h4,
 .footer-contact h4,
 .footer-legal h4 {
@@ -427,7 +432,6 @@ figure.wp-block-image{
 .footer-legal a:hover,
 .footer-contact a:hover {
   text-decoration: underline;
-   /*color: #F39C12;*/
 }
 
 /* Línea separadora verde centrada */
@@ -450,7 +454,6 @@ figure.wp-block-image{
   display: none;
 }
 
-/*aqui*/
 /* RESPONSIVE */
 
 /* 1. Móvil - hasta 375px */
@@ -479,17 +482,51 @@ figure.wp-block-image{
     display: flex;
   }
 
+   /* Centrar imagen*/
+  .wp-block-cover__image-background {
+   object-position: 75% 27% !important;
+  }
+
   /* Hero adaptado */
-  .wp-block-cover__inner-container h1.wp-block-heading {
+  /* Titulo*/
+  .wp-block-cover__inner-container h1.wp-block-heading{
     font-size: 22px;
     width: 90%;
+    text-align: left;
+  }
+
+  /*Parrafo*/
+  .wp-block-cover__inner-container p{
+    font-size: 22px;
+    width: 90%;
+    text-align: left;
+  }
+
+  /* Texto campus */
+  p#parrafo-campus {
+    width: 90%;
+    font-size: 16px;
+  }
+
+  /* "Por qué elegirnos" texto arriba, imagen abajo */
+  /*.porque-elegirnos*/
+  .wp-block-media-text {
+    display: flex;
+    flex-direction: column;
     text-align: center;
   }
 
-  /* Tarjetas apiladas */
-  .tarjeta-beneficio {
+  /*.porque-elegirnos p*/
+   .wp-block-media-text__content h2, p{
     width: 90%;
-    margin: 10px auto;
+    order: 1; 
+    margin-bottom: 20px;
+  }
+
+  /*.porque-elegirnos img*/
+   .wp-block-media-text__media img{
+    max-width: 80%;
+    order: 2; 
   }
 
   /* Formulario simplificado */
@@ -499,10 +536,49 @@ figure.wp-block-image{
     font-size: 14px;
   }
 
-  /* Texto campus */
-  p#parrafo-campus {
-    width: 90%;
-    font-size: 16px;
+  /* Centrar logo y descripción del footer */
+  .footer-logo,
+  .footer-description {
+    flex-basis: 100%;
+    text-align: center;
+    margin: 0 auto; 
+    padding: 0 20px; 
+    width: 100%; 
+  }
+
+  /* Si hay un párrafo dentro de footer-description */
+  .footer-description p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 90%; 
+  }
+
+  /* Centrar contenido del footer en móvil */
+  .footer-links,
+  .footer-contact,
+  .footer-legal {
+    text-align: center;
+    margin-bottom: 2rem; 
+  }
+
+  /* Centrar títulos */
+  .footer-links h4,
+  .footer-contact h4,
+  .footer-legal h4 {
+    text-align: center;
+  }
+  /*Centrar enlace en footer-contact */
+    .footer-contact p {
+      text-align: center;
+    }
+  /* Centrar listas */
+  .footer-links ul,
+  .footer-legal ul {
+    text-align: center;
+  }
+  .site-bottom-bar .copyright-text{
+    text-align: center;
+    padding: 15px;
   }
 }
 
@@ -518,32 +594,4 @@ figure.wp-block-image{
     background-color: white;
   }
 
-  /* Beneficios en grid 2x2 */
-  .contenedor-beneficios {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .tarjeta-beneficio {
-    width: 100%;
-  }
-
-  /* "Por qué elegirnos" con texto e imagen en línea */
-  .porque-elegirnos {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .porque-elegirnos img {
-    max-width: 50%;
-  }
-
-  .porque-elegirnos p {
-    width: 50%;
-  }
 }
