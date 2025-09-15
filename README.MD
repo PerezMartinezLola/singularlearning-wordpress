@@ -114,7 +114,7 @@ En Windows con XAMPP normalmente no hay problemas de permisos, pero si los hay:
 ## 📞 Información del proyecto
 **Proyecto**: Plataforma eLearning corporativa  
 **Tecnología**: WordPress con tema personalizado  
-**Tema base: Underscores - Framework para desarrolladores de WordPress
+**Tema base**: Underscores - Framework para desarrolladores de WordPress
 **Repositorio**: Configurado con buenas prácticas de seguridad
 
 ---
